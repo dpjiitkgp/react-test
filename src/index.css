@@ -1,0 +1,107 @@
+/* Minimal styling so the page is readable. You are not assessed on any of this,
+   and you are free to ignore or delete it. */
+
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f7;
+  color: #16201f;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121817;
+    color: #e6ecea;
+  }
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+/* Optional helpers -------------------------------------------------------- */
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(128, 145, 143, 0.35);
+  margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  .row {
+    background: rgba(255, 255, 255, 0.04);
+  }
+}
+
+.row .name {
+  font-weight: 600;
+  min-width: 130px;
+}
+
+.row .version {
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
+}
+
+.status {
+  margin-left: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+}
+
+.status.online  { color: #2f6b3d; }
+.status.offline { color: #6b7674; }
+.status.error   { color: #a2402f; }
+
+@media (prefers-color-scheme: dark) {
+  .status.online  { color: #7fc48f; }
+  .status.offline { color: #93a09e; }
+  .status.error   { color: #e08a76; }
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 6px 10px;
+  border: 1px solid rgba(128, 145, 143, 0.5);
+  background: transparent;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.count {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
